@@ -89,7 +89,7 @@ const Home = () => {
                 </div>
 
             </div>
-            <div className="w-full h-fit flex flex-col justify-center items-center gap-3 mt-3 px-4">
+            <div className="w-full h-fit flex flex-col justify-center items-center gap-3 mt-3 px-4 py-8 bg-white">
                 <h1 className="text-center text-red-500 font-bold text-xl sm:text-2xl md:text-4xl mt-4">Meet our Team</h1>
                 <p className="px-2">Take a look innovative and experiance team.</p>
                 <div className="w-full h-fit flex flex-wrap justify-center items-center gap-6 py-6">
