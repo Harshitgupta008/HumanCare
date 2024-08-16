@@ -5,4 +5,5 @@
 body {
     background-color: aliceblue;
     font-family: "Poppins", sans-serif;
+    scroll-behavior: smooth;
 }

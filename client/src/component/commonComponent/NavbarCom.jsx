@@ -14,15 +14,15 @@ const NavbarCom = () => {
         <>
             <div className="bg-white h-20 w-full flex justify-between items-center text-red-500 font-bold  sticky top-0">
                 <div className="flex justify-between items-center h-full w-full px-5 relative">
-                    <div className="flex justify-center items-center flex-col">
+                    <Link to={"/register"} className="flex justify-center items-center flex-col">
                         <img src={Logo} alt="" className="h-8 bg-slate-600" />
                         <h1>Human<span className="text-black">Care</span></h1>
-                    </div>
+                    </Link>
                     <div className="hidden sm:flex justify-center items-center gap-6">
                         <Link to={"/home"}>Home</Link>
                         <Link to={"/service"}>Services</Link>
                         <Link to={"/blog"}>Blog</Link>
-                        <Link to={"/contact"}>Contant Us</Link>
+                        <Link to={"/login"}>Account</Link>
                     </div>
                     <div className="sm:hidden">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="size-7" onClick={SideNavOn}>
@@ -37,7 +37,7 @@ const NavbarCom = () => {
                                     <Link to={"/home"} className="hover:text-black">Home</Link>
                                     <Link to={"/service"} className="hover:text-black">Services</Link>
                                     <Link to={"/blog"} className="hover:text-black">Blog</Link>
-                                    <Link to={"/contact"} className="hover:text-black">Contact Us</Link>
+                                    <Link to={"/login"} className="hover:text-black">Account</Link>
                                 </div>
                             </div>
                         </div>
