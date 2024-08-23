@@ -1,7 +1,7 @@
 import { useState } from "react";
 import Logo from "../../img/LogoCare.jpg"
 import { Link } from "react-router-dom";
-const NavbarDoc = () => {
+const NavbarClient = () => {
     const [showSidenav, setShowSidenav] = useState({ display: "none" })
 
     const SideNavOn = () => {
@@ -22,7 +22,7 @@ const NavbarDoc = () => {
                         <Link to={"/home"}>Home</Link>
                         <Link to={"/blog"}>Blog</Link>
                         <Link to={"/service"}>Service</Link>
-                        <Link to={"/logoutdoc"}>Profile</Link>
+                        <Link to={"/logoutclient"}>Profile</Link>
                     </div>
                     <div className="sm:hidden">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="size-7" onClick={SideNavOn}>
@@ -37,7 +37,7 @@ const NavbarDoc = () => {
                                     <Link to={"/home"} className="hover:text-black">Home</Link>
                                     <Link to={"/blog"} className="hover:text-black">Blog</Link>
                                     <Link to={"/service"} className="hover:text-black">Services</Link>
-                                    <Link to={"/logoutdoc"} className="hover:text-black">Profile</Link>
+                                    <Link to={"/logoutclient"} className="hover:text-black">Profile</Link>
                                 </div>
                             </div>
                         </div>
@@ -47,4 +47,4 @@ const NavbarDoc = () => {
         </>
     )
 }
-export default NavbarDoc;
+export default NavbarClient;

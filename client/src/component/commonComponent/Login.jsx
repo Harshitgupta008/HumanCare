@@ -1,20 +1,27 @@
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const Login = () => {
+    const Navigation = useNavigate();
     const [optation, setOptation] = useState("");
     const handleSection = (e) => {
         setOptation(e.target.value)
     }
     const LoginUser = (e) => {
         e.preventDefault();
-        // if (!optation) {
-        //     return console.log("select type")
-        // } else if (optation === "Doctor") {
-        //     return console.log("Hello Doctor")
-        // } else if (optation === "Patient") {
-        //     return console.log("Welcome Patient")
-        // }
+        if (!optation) {
+            return window.alert("add Your Type")
+        } else if (optation === "Doctor") {
+            localStorage.setItem("doctorToken", "doctoraddbytoken")
+            window.alert("Login Doctor")
+            Navigation("/home")
+            return location.reload(); 
+        } else if (optation === "Patient") {
+            localStorage.setItem("patientToken","patientaddbytoken")
+            window.alert("Login Patient")
+            Navigation("/home")
+            return location.reload();
+        }
     }
     return (
         <>

@@ -6,10 +6,10 @@ import Service from "../component/commonComponent/Services";
 import Home from "../component/commonComponent/Home";
 import Login from "../component/commonComponent/Login";
 import Register from "../component/commonComponent/Register";
-import LogoutClient from "../component/clientComponent/LogoutCleint";
+import LogoutDoc from "../component/doctorComponent/LogoutDoc";
 import { Useauth } from "../Auth";
-const ClientRoute = () => {
-    const { loggedpatient } = Useauth();
+const DocRoute = () => {
+    const { loggedDoctor } = Useauth();
     return (
         <>
             <Routes>
@@ -19,8 +19,8 @@ const ClientRoute = () => {
                 <Route path="/blog" element={<Blog />} />
                 <Route path="/contact" element={<Contact />} />
                 {
-                    loggedpatient ?
-                        <Route path="/logoutclient" element={<LogoutClient />} />
+                    loggedDoctor ?
+                        <Route path="/logoutdoc" element={<LogoutDoc />} />
                         :
                         <>
                             <Route path="/login" element={<Login />} />
@@ -32,4 +32,4 @@ const ClientRoute = () => {
         </>
     )
 }
-export default ClientRoute;
+export default DocRoute;
