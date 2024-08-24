@@ -5,6 +5,7 @@ import doc1 from "../../img/doc1.jpg"
 import doc2 from "../../img/doc2.jpg"
 import doc3 from "../../img/doc3.jpg"
 import doc4 from "../../img/doc4.jpg"
+import harshit from "../../img/harshit.jpg"
 import { Link } from "react-router-dom"
 const Home = () => {
     return (
@@ -92,8 +93,8 @@ const Home = () => {
             <iframe
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3507.0634358691495!2d77.47809541069235!3d28.477636175648577!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390cea1a83be5989%3A0x6a3690bfa642b5c3!2sGALGOTIAS%20UNIVERSITY!5e0!3m2!1sen!2sin!4v1724486755196!5m2!1sen!2sin"
                 width="100%"
-                height="450"
-                style={{ border: 0, borderRadius : 10, marginTop: 10 }}
+                height="550"
+                style={{ border: 0, padding : 5, marginTop: 10 }}
                 allowFullScreen={true}
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
@@ -137,6 +138,22 @@ const Home = () => {
                         <div className="w-full h-32">
                             <h1 className="text-gray-500 py-4 text-center">Circuit</h1>
                             <p className=" text-center px-2">4+ Years of Experince in Pediatrician</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div className="w-full h-fit flex flex-col justify-center items-center gap-3 mt-3 px-4 py-8 bg-white">
+                <h1 className="text-center text-red-500 font-bold text-xl sm:text-2xl md:text-4xl mt-4">Meet our Developer</h1>
+                <p className="px-2">Take a look innovative and experiance team for Our Developing.</p>
+                <div className="w-full h-fit flex flex-wrap justify-center items-center gap-6 py-6">
+                    <div className="h-80 w-64 bg-white rounded-t-xl shadow-xl">
+                        <div className="w-full h-48 rounded-t-xl">
+                            <img src={harshit} alt="" className="h-full w-full rounded-t-xl" />
+                        </div>
+                        <div className="w-full h-40">
+                            <h1 className="text-gray-500 py-4 text-center">Harshit Gupta</h1>
+                            <p className=" text-center px-2 ">A full-stack Developer <span className="text-red-500">And</span> Founder of HumanCare 😊</p>
                         </div>
                     </div>
                 </div>

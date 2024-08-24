@@ -1,5 +1,6 @@
 import { useState } from "react";
 import Allservice from "./Allservice";
+import Gallery from "./Gallery";
 const Service = () => {
     const [data, setData] = useState(Allservice)
     return (
@@ -25,6 +26,7 @@ const Service = () => {
 
                 </div>
             </div>
+           <Gallery/>
         </>
     )
 }
