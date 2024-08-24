@@ -15,7 +15,6 @@ const LogoutDoc = () => {
                 <div className="w-48 mt-3">
                     <button onClick={LogoutUser} className=" w-full  py-3 rounded-full bg-red-500 text-white hover:bg-red-700">Logout</button>
                 </div>
-
             </div>
         </>
     )

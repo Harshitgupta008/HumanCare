@@ -22,7 +22,7 @@ const NavbarDoc = () => {
                         <Link to={"/home"}>Home</Link>
                         <Link to={"/blog"}>Blog</Link>
                         <Link to={"/service"}>Service</Link>
-                        <Link to={"/logoutdoc"}>Profile</Link>
+                        <Link to={"/profiledoc"}>Profile</Link>
                     </div>
                     <div className="sm:hidden">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="size-7" onClick={SideNavOn}>
@@ -37,7 +37,7 @@ const NavbarDoc = () => {
                                     <Link to={"/home"} className="hover:text-black">Home</Link>
                                     <Link to={"/blog"} className="hover:text-black">Blog</Link>
                                     <Link to={"/service"} className="hover:text-black">Services</Link>
-                                    <Link to={"/logoutdoc"} className="hover:text-black">Profile</Link>
+                                    <Link to={"/profiledoc"} className="hover:text-black">Profile</Link>
                                 </div>
                             </div>
                         </div>

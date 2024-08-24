@@ -46,7 +46,7 @@ const Login = () => {
                         </select>
                     </div>
                     <button onClick={LoginUser} className=" h-fit w-full  py-3 rounded-full bg-red-500 text-white hover:bg-red-700">Login</button>
-                    <div className="flex flex-row items-center justify-between px-1"><Link to={"/register"} className="hover:text-red-500">Don't have Account</Link >  <Link className="hover:text-red-500">forget pawwsord ?</Link ></div>
+                    <div className="flex flex-row items-center justify-center px-1 gap-5 flex-wrap "><Link to={"/register"} className="hover:text-red-500">Don't have Account</Link >  <Link className="hover:text-red-500">forget pawwsord ?</Link ></div>
                 </form>
             </div>
         </>
