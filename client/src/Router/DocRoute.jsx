@@ -6,6 +6,8 @@ import Service from "../component/commonComponent/Services";
 import Home from "../component/commonComponent/Home";
 import LogoutDoc from "../component/doctorComponent/LogoutDoc";
 import ProfileDoc from "../component/doctorComponent/Page/ProfileDoc";
+import AddBlog from "../component/AddBlog";
+import UserBlog from "../component/UserBlog";
 const DocRoute = () => {
     return (
         <>
@@ -17,6 +19,9 @@ const DocRoute = () => {
                 <Route path="/contact" element={<Contact />} />
                 <Route path="/logoutdoc" element={<LogoutDoc />} />
                 <Route path="/profiledoc" element={<ProfileDoc />} />
+                <Route path="/blog/:subpage" element={<UserBlog />} />
+                <Route path="/addblog" element={<AddBlog />} />
+
 
                 <Route path="/*" element={<ErrorPage />} />
             </Routes>

@@ -6,6 +6,8 @@ import Service from "../component/commonComponent/Services";
 import Home from "../component/commonComponent/Home";
 import LogoutClient from "../component/clientComponent/LogoutCleint";
 import ProfileClient from "../component/clientComponent/Page/ProfileClint";
+import AddBlog from "../component/AddBlog";
+import UserBlog from "../component/UserBlog";
 const ClientRoute = () => {
     return (
         <>
@@ -17,6 +19,9 @@ const ClientRoute = () => {
                 <Route path="/contact" element={<Contact />} />
                 <Route path="/logoutclient" element={<LogoutClient />} />
                 <Route path="/profileclient" element={<ProfileClient />} />
+                <Route path="/blog/:subpage" element={<UserBlog />} />
+                <Route path="/addblog" element={<AddBlog />} />
+
 
                 <Route path="/*" element={<ErrorPage />} />
             </Routes>
