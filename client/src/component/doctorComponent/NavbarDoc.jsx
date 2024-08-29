@@ -12,7 +12,7 @@ const NavbarDoc = () => {
     }
     return (
         <>
-            <div className="bg-white h-20 w-full flex justify-between items-center text-red-500 font-bold  sticky top-0">
+            <div className="bg-white h-20 w-full flex justify-between items-center text-red-500 font-bold  sticky top-0 z-10">
                 <div className="flex justify-between items-center h-full w-full px-5 relative">
                     <Link to={"/register"} className="flex justify-center items-center flex-col">
                         <img src={Logo} alt="" className="h-8 bg-slate-600" />

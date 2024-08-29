@@ -1,18 +1,20 @@
 import image1 from "../../img/homeslide1.jpg"
 import image2 from "../../img/homeslide2.png"
-
-import doc1 from "../../img/doc1.jpg"
-import doc2 from "../../img/doc2.jpg"
-import doc3 from "../../img/doc3.jpg"
-import doc4 from "../../img/doc4.jpg"
 import harshit from "../../img/harshit.jpg"
 import { Link } from "react-router-dom"
+import ImageSlider from "./ImageSlider"
+import CashBackBanner from "./CashBackBanner"
+import OurMission from "./OurMission"
+import DoctorTeam from "./DoctorTeam"
 const Home = () => {
     return (
         <>
-            <div className="w-full h-1/2 lg:h-96 ">
+            <ImageSlider />
+            <div className="w-full h-1/2 lg:h-96 relative ">
                 <img src={image1} className="h-full w-full object-cover lg:object-fill" alt="..." />
+
             </div>
+
 
             <div className=" mt-3 py-7 bg-white flex items-center justify-center h-fit w-full flex-wrap gap-5 sm:gap-0 sm:flex-nowrap break-words">
                 <div className="w-full md:w-1/2 h-76 mt-2 sm:h-96 lg:h-1/2  flex items-center justify-center flex-col">
@@ -53,96 +55,28 @@ const Home = () => {
                 </div>
             </div>
 
-            <div className="mt-5 h-fit w-full bg-white px-3 py-7 flex flex-col gap-7 lg:gap-12">
-                <h1 className="text-center text-red-500 font-bold text-xl sm:text-2xl md:text-4xl my-4">Our Mission</h1>
+            <OurMission />
 
-                <div className="w-full text-center flex flex-col gap-2 lg:px-14">
-                    <h1 className="text-center font-bold text-sm sm:text-xl md:text-2xl my-4">Improving Patient Outcomes</h1>
-                    <p> Ensuring that patients receive effective treatments that improve their health and quality of life.
-                        Making healthcare services available to all individuals, regardless of
-                        their socioeconomic status, geographic location, or other barriers.
-                    </p>
-                </div>
-                <hr />
-                <div className="w-full text-center flex flex-col gap-2 lg:px-14">
-                    <h1 className="text-center font-bold text-sm sm:text-xl md:text-2xl my-4">Patient-Centered Care</h1>
-                    <p>Focuses on providing care that respects and responds to the preferences,
-                        needs, and values of patients. This includes fostering better communication, empathy, and shared
-                        decision-making between patients and healthcare providers.
-                    </p>
-                </div>
-                <hr />
-                <div className="w-full text-center flex flex-col gap-2 lg:px-14">
-                    <h1 className="text-center font-bold text-sm sm:text-xl md:text-2xl my-4">Public and Community Health</h1>
-                    <p>Focuses on improving health outcomes at a population level by addressing social
-                        determinants of health, promoting vaccination programs,
-                        and tackling public health issues like infectious diseases and chronic conditions.
-                    </p>
-                </div>
-                <hr />
-                <div className="w-full text-center flex flex-col gap-2">
-                    <h1 className="text-center font-bold text-sm sm:text-xl md:text-2xl my-4">Views </h1>
-                    <p>Focuses on population health, disease prevention,
-                        and health promotion at the community or global level.
-                        Emphasizes individual patient care, including diagnosis, treatment,
-                        and ongoing management of health conditions
-                    </p>
-                </div>
-
+            <div className="w-full py-20 h-fit justify-center items-center">
+                <h1 className="font-bold text-black text-3xl sm:4xl md:text-5xl lg:text-6xl text-center  flex justify-center flex-col items-center ">
+                    Expert designed solutions
+                    <br />
+                    <span className="text-red-500"> 85% <span className="text-black">success rate</span> </span>
+                </h1>
             </div>
+
+            <CashBackBanner />
+
             <iframe
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3507.0634358691495!2d77.47809541069235!3d28.477636175648577!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390cea1a83be5989%3A0x6a3690bfa642b5c3!2sGALGOTIAS%20UNIVERSITY!5e0!3m2!1sen!2sin!4v1724486755196!5m2!1sen!2sin"
                 width="100%"
                 height="550"
-                style={{ border: 0, padding : 5, marginTop: 10 }}
+                style={{ border: 0, padding: 5, marginTop: 10 }}
                 allowFullScreen={true}
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
             ></iframe>
-
-            <div className="w-full h-fit flex flex-col justify-center items-center gap-3 mt-3 px-4 py-8 bg-white">
-                <h1 className="text-center text-red-500 font-bold text-xl sm:text-2xl md:text-4xl mt-4">Meet our Team</h1>
-                <p className="px-2">Take a look innovative and experiance team.</p>
-                <div className="w-full h-fit flex flex-wrap justify-center items-center gap-6 py-6">
-                    <div className="h-80 w-64 bg-white rounded-t-xl shadow-xl">
-                        <div className="w-full h-48 rounded-t-xl">
-                            <img src={doc1} alt="" className="h-full w-full rounded-t-xl" />
-                        </div>
-                        <div className="w-full h-32">
-                            <h1 className="text-gray-500 py-4 text-center">Munna Bhai</h1>
-                            <p className=" text-center px-2">4+ year Experince of  General Practitioner</p>
-                        </div>
-                    </div>
-                    <div className="h-80 w-64 bg-white rounded-t-xl shadow-xl">
-                        <div className="w-full h-48 rounded-t-xl">
-                            <img src={doc2} alt="" className="h-full w-full rounded-t-xl" />
-                        </div>
-                        <div className="w-full h-32">
-                            <h1 className="text-gray-500 py-4 text-center">Circuit</h1>
-                            <p className=" text-center px-2">8+ Years of Experince in Cardiologist</p>
-                        </div>
-                    </div>
-                    <div className="h-80 w-64 bg-white rounded-t-xl shadow-xl">
-                        <div className="w-full h-48 rounded-t-xl">
-                            <img src={doc3} alt="" className="h-full w-full rounded-t-xl" />
-                        </div>
-                        <div className="w-full h-32">
-                            <h1 className="text-gray-500 py-4 text-center">Munna Bhai</h1>
-                            <p className=" text-center px-2">2+ Years of Experince in Orthopedic Surgeon</p>
-                        </div>
-                    </div>
-                    <div className="h-80 w-64 bg-white rounded-t-xl shadow-xl">
-                        <div className="w-full h-48 rounded-t-xl">
-                            <img src={doc4} alt="" className="h-full w-full rounded-t-xl" />
-                        </div>
-                        <div className="w-full h-32">
-                            <h1 className="text-gray-500 py-4 text-center">Circuit</h1>
-                            <p className=" text-center px-2">4+ Years of Experince in Pediatrician</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
+            <DoctorTeam />
             <div className="w-full h-fit flex flex-col justify-center items-center gap-3 mt-3 px-4 py-8 bg-white">
                 <h1 className="text-center text-red-500 font-bold text-xl sm:text-2xl md:text-4xl mt-4">Meet our Developer</h1>
                 <p className="px-2">Take a look innovative and experiance team for Our Developing.</p>
