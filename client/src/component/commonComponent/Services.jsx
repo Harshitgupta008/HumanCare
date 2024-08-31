@@ -1,6 +1,7 @@
 import { useState } from "react";
 import Allservice from "./Allservice";
 import Gallery from "./Gallery";
+import Review from "./Review";
 const Service = () => {
     const [data, setData] = useState(Allservice)
     return (
@@ -27,6 +28,7 @@ const Service = () => {
                 </div>
             </div>
            <Gallery/>
+           <Review/>
         </>
     )
 }

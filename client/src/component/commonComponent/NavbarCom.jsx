@@ -20,8 +20,8 @@ const NavbarCom = () => {
                     </Link>
                     <div className="hidden sm:flex justify-center items-center gap-6">
                         <Link to={"/home"}>Home</Link>
-                        <Link to={"/service"}>Services</Link>
                         <Link to={"/blog"}>Blog</Link>
+                        <Link to={"/service"}>Services</Link>
                         <Link to={"/login"}>Account</Link>
                     </div>
                     <div className="sm:hidden">
@@ -35,8 +35,8 @@ const NavbarCom = () => {
                                 </svg>
                                 <div className="flex flex-col justify-center items-center gap-6 mt-12 mb-5">
                                     <Link to={"/home"} className="hover:text-black">Home</Link>
-                                    <Link to={"/service"} className="hover:text-black">Services</Link>
                                     <Link to={"/blog"} className="hover:text-black">Blog</Link>
+                                    <Link to={"/service"} className="hover:text-black">Services</Link>
                                     <Link to={"/login"} className="hover:text-black">Account</Link>
                                 </div>
                             </div>
