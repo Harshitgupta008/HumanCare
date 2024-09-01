@@ -6,6 +6,8 @@ import ImageSlider from "./ImageSlider"
 import CashBackBanner from "./CashBackBanner"
 import OurMission from "./OurMission"
 import DoctorTeam from "./DoctorTeam"
+import Gallery from "./Gallery"
+import defaultim from "../../img/defaultDp.jpg"
 const Home = () => {
     return (
         <>
@@ -76,6 +78,7 @@ const Home = () => {
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
             ></iframe>
+            <Gallery />
             <DoctorTeam />
             <div className="w-full h-fit flex flex-col justify-center items-center gap-3 mt-3 px-4 py-8 bg-white">
                 <h1 className="text-center text-red-500 font-bold text-xl sm:text-2xl md:text-4xl mt-4">Meet our Developer</h1>
@@ -90,7 +93,18 @@ const Home = () => {
                             <p className=" text-center px-2 ">A full-stack Developer <span className="text-red-500">And</span> Founder of HumanCare 😊</p>
                         </div>
                     </div>
+                    <div className="h-80 w-64 bg-white rounded-t-xl shadow-xl">
+                        <div className="w-full h-48 rounded-t-xl">
+                            <img src={defaultim} alt="" className="h-full w-full rounded-t-xl" />
+                        </div>
+                        <div className="w-full h-40">
+                            <h1 className="text-gray-500 py-4 text-center">yash</h1>
+                            <p className=" text-center px-2 ">App Developer</p>
+                        </div>
+                    </div>
+
                 </div>
+                
             </div>
         </>
     )

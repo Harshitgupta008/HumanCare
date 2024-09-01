@@ -18,7 +18,7 @@ const AllBlog = () => {
                     {
                         blogData.map((blog, i) => {
                             return (
-                                <div key={i} className="h-fit w-full px-11 py-10 flex flex-col gap-8 rounded-2xl  shadow-lg">
+                                <div key={i} className="h-fit w-full px-11 py-10 flex flex-col gap-8 rounded-2xl bg-red-100  shadow-lg">
                                     <h1> <span className="text-lg font-bold">Name :</span> {blog.name}</h1>
                                     <h1 className=" font-bold"><span className="text-xl">Title : </span> <span className="text-red-500">{blog.title}</span></h1>
                                     <h1 className="text-gray-500">

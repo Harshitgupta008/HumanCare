@@ -1,6 +1,7 @@
-import {  useState } from "react";
+import { useState } from "react";
 import { Useauth } from "../../Auth";
 import AddReview from "../AddReview";
+import defaultImage from "../../img/harshit.jpg"
 
 const GetStorage = () => {
     const AllReview = localStorage.getItem("review");
@@ -25,12 +26,19 @@ const Review = () => {
                 {
                     reviewData.map((reviews, i) => {
                         return (
-                            <div key={i} className="h-fit w-full px-11 py-10 flex flex-col gap-8 rounded-2xl  shadow-lg">
-                                <h1> <span className="text-lg font-bold">Name :</span> {reviews.name}</h1>
-                                <h1 className="text-gray-500">
-                                    <span className="text-black">Review :</span> {reviews.review}
-                                </h1>
-                            </div>
+                            <>
+
+                                <div key={i} className="h-fit w-full px-11 py-10 flex mt-5 flex-col gap-3 rounded-2xl border-2 border-gray-400 shadow-sm">
+                                    <div className="w-fit h-fit flex justify-center items-center  gap-3 ">
+                                        <img src={defaultImage} alt="" className="h-16 w-16 rounded-full"/>
+                                        <h1 className="font-bold"> {reviews.name}</h1>
+                                    </div>
+                                    <hr className="bg-slate-800  w-full mb-2 mt-4" />
+                                    <h1 className="text-gray-500 font-bold px-2">
+                                        {reviews.review}
+                                    </h1>
+                                </div>
+                            </>
                         )
                     })
                 }
