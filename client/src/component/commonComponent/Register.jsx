@@ -1,9 +1,24 @@
 import { Link } from "react-router-dom";
 import defaultDp from "../../img/defaultDp.jpg"
-import { useState } from "react";
+import { useEffect, useState } from "react";
+
+const getData = ()=>{
+    const check = localStorage.getItem("userdata");
+    if(check){
+        return JSON.parse(localStorage.getItem("userdata"))
+    }else{
+        return [];
+    } 
+}
 const Register = () => {
     const [image, setImage] = useState(null);
     const [optation, setOptation] = useState("");
+    const [user,setUser] = useState({
+        name:"",number:"", email:"", password:""
+    })
+    const [data,setData] = useState(getData);
+
+    const [cpassword,setCpassword] = useState("")
     const HandleImage = (e) => {
         const file = e.target.files[0];
         setImage(file)
@@ -11,18 +26,17 @@ const Register = () => {
     const handleSection = (e) => {
         setOptation(e.target.value)
     }
-
+    const handleInput = (e)=>{
+        const { name, value} = e.target;
+        setUser({...user,[name]:value});
+    }
     const RegisterUser = (e) => {
         e.preventDefault();
-        // if (!optation) {
-        //     return console.log("select type")
-        // } else if (optation === "Doctor") {
-        //     return console.log("Hello Doctor")
-        // } else if (optation === "Patient") {
-        //     return console.log("Welcome Patient")
-        // }
+        setData(user);
     }
-
+    useEffect(()=>{
+        localStorage.setItem("userdata",JSON.stringify(data));
+    },[data])
     return (
         <>
             <div className="flex justify-center flex-col items-center h-fit px-4 py-8 mt-2 bg-white w-full">
@@ -47,23 +61,23 @@ const Register = () => {
                     </div>
                     <div className="flex flex-col  gap-1">
                         <label htmlFor="name" className="text-red-500 font-bold px-3 py-1">Name</label>
-                        <input type="text" id="name" placeholder="Enter your Name" className="h-12 px-4 py-5 border-gray-400 border-2 rounded-full w-full" />
+                        <input type="text" id="name" name="name" value={user.name} onChange={handleInput} placeholder="Enter your Name" className="h-12 px-4 py-5 border-gray-400 border-2 rounded-full w-full" />
                     </div>
                     <div className="flex flex-col gap-1">
                         <label htmlFor="number" className="text-red-500 font-bold px-3 py-1">Number</label>
-                        <input type="number" id="number" placeholder="Enter your Phone Number" className="h-12 px-4 py-5 border-gray-400 border-2 rounded-full w-full" />
+                        <input type="number" id="number" name="number" value={user.number} onChange={handleInput} placeholder="Enter your Phone Number" className="h-12 px-4 py-5 border-gray-400 border-2 rounded-full w-full" />
                     </div>
                     <div className="flex flex-col gap-1">
                         <label htmlFor="email" className="text-red-500 font-bold px-3 py-1">Email</label>
-                        <input type="email" id="email" placeholder="Enter your valid email" className="h-12 px-4 py-5 border-gray-400 border-2 rounded-full w-full" />
+                        <input type="email" id="email" name="email" value={user.email} onChange={handleInput} placeholder="Enter your valid email" className="h-12 px-4 py-5 border-gray-400 border-2 rounded-full w-full" />
                     </div>
                     <div className="flex flex-col gap-1">
                         <label htmlFor="password" className="text-red-500 font-bold px-3 py-1">Password</label>
-                        <input type="password" id="password" placeholder="Enter your password" className="h-12 px-4 py-5 border-gray-400 border-2 rounded-full w-full" />
+                        <input type="password" id="password" name="password" value={user.password} onChange={handleInput} placeholder="Enter your password" className="h-12 px-4 py-5 border-gray-400 border-2 rounded-full w-full" />
                     </div>
                     <div className="flex flex-col gap-1">
                         <label htmlFor="cpassword" className="text-red-500 font-bold px-3 py-1">Confirm-Password</label>
-                        <input type="password" id="cpassword" placeholder="Enter your password" className="h-12 px-4 py-5 border-gray-400 border-2 rounded-full w-full" />
+                        <input type="password" id="cpassword" value={cpassword} onChange={(e)=>{setCpassword(e.target.value)}} placeholder="Enter your password" className="h-12 px-4 py-5 border-gray-400 border-2 rounded-full w-full" />
                     </div>
 
                     <button onClick={RegisterUser} className=" h-fit w-full  py-3 rounded-full bg-red-500 text-white hover:bg-red-700">Register</button>
