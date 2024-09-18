@@ -17,8 +17,10 @@ const ClientRoute = () => {
                 <Route path="/service" element={<Service />} />
                 <Route path="/blog" element={<Blog />} />
                 <Route path="/contact" element={<Contact />} />
-                <Route path="/logoutclient" element={<LogoutClient />} />
-                <Route path="/profileclient" element={<ProfileClient />} />
+                <Route path="/profileclient" element={<ProfileClient />} >
+                    <Route path="" element={<LogoutClient />} />
+                    <Route path="logoutclient" element={<LogoutClient />} />
+                </Route>
                 <Route path="/blog/:subpage" element={<UserBlog />} />
                 <Route path="/addblog" element={<AddBlog />} />
 

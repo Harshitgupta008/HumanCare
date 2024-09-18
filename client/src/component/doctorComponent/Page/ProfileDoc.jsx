@@ -1,12 +1,12 @@
-import LogoutDoc from "../LogoutDoc";
+import { Outlet } from 'react-router-dom';
 import SideNavbarDoc from "../SideNavbarDoc";
 
 const ProfileDoc = () => {
     return (
         <>
-
             <SideNavbarDoc />
-            <LogoutDoc />
+            <Outlet />
+
         </>
     )
 }

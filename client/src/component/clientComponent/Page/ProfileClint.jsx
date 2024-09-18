@@ -1,15 +1,13 @@
-
-import LogoutCleint from "../LogoutCleint";
 import SideNavbarClient from "../SideNavbarClient";
-
+import { Outlet } from 'react-router-dom';
 
 const ProfileClient = () => {
 
     return (
         <>
-
+        
             <SideNavbarClient />
-            <LogoutCleint />
+            <Outlet/>
         </>
     )
 }

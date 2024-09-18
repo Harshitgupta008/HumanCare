@@ -1,4 +1,5 @@
 import {  useState } from "react";
+import { Link } from "react-router-dom";
 
 const SideNavbarClient = () => {
     const [slideCss, setSlideCss] = useState({ width: "0" })
@@ -11,16 +12,16 @@ const SideNavbarClient = () => {
 
     return (
         <>
-            <div className=" bg-white h-fit  py-8 w-full relative">
+            <div className="h-fit  py-8 w-fit absolute">
                 <div onClick={OpenNav} className="h-fit flex justify-end px-4 items-center  py-1 rounded-r-full w-16 bg-gray-200 text-black  hover:w-20  cursor-pointer transition-all ease-in-out duration-200">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-8">
                         <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
                     </svg>
                 </div>
 
-                <div style={slideCss} className="h-fit absolute top-0 left-0 transition-all ease-in-out duration-300">
-                    <div className=" hiddenoverfolw flex flex-col h-screen bg-gray-200 text-black font-bold w-full pt-5 pb-3 gap-3  overflow-y-auto   rounded-r-lg ">
-                        <span className="w-full hover:bg-red-500 hover:text-white cursor-pointer py-1  flex justify-center items-center">Home</span>
+                <div style={slideCss} className="h-fit absolute top-2 left-0 transition-all ease-in-out duration-300">
+                    <div className=" hiddenoverfolw flex flex-col h-screen bg-gray-200 text-black font-bold w-full pt-8 pb-3 gap-3  overflow-y-auto   rounded-r-lg ">
+                        <Link onClick={CloseNavbar} to={"/profileclient/logoutclient"} className="w-full hover:bg-red-500 hover:text-white cursor-pointer py-1  flex justify-center items-center">Send</Link>
                         <span className="w-full hover:bg-red-500 hover:text-white cursor-pointer py-1  flex justify-center items-center">Home</span>
                         <span className="w-full hover:bg-red-500 hover:text-white cursor-pointer py-1  flex justify-center items-center">Home</span>
                         <span className="w-full hover:bg-red-500 hover:text-white cursor-pointer py-1  flex justify-center items-center">Home</span>
