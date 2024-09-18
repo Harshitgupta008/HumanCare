@@ -29,7 +29,7 @@ const ImageSlider = () => {
         <>
             <div className="py-8  bg-white">
                 <div className="relative  w-full h-fit py-5">
-                    <div className="hiddenoverfolw h-36  w-full px-5 flex gap-6 items-center overflow-auto">
+                    <div className="hiddenoverfolw h-36 scroll-smooth w-full px-5 flex gap-6 items-center overflow-auto">
                         {
                             data.map((doc, i) => {
                                 return <div className="w-fit h-fit p-2 flex flex-col gap-3 justify-center items-center cursor-pointer text-red-500 hover:text-black" key={i}>
