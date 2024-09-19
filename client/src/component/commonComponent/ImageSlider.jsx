@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useRef, useState } from "react";
 import defaultImage from "../../img/defaultDp.jpg"
 const doctorData = [
     { name: "User1" },
@@ -24,12 +24,26 @@ const doctorData = [
 
 ]
 const ImageSlider = () => {
-    const [data, setData] = useState(doctorData)
+    const [data, setData] = useState(doctorData);
+    const scrollContainerRef = useRef(null);
+
+    const Leftslide = () => {
+        if (scrollContainerRef.current) {
+
+            scrollContainerRef.current.scrollLeft += 300;
+        }
+    }
+    const Rightslide = () => {
+        if (scrollContainerRef.current) {
+
+            scrollContainerRef.current.scrollLeft -= 300; 
+        }
+    }
     return (
         <>
             <div className="py-8  bg-white">
                 <div className="relative  w-full h-fit py-5">
-                    <div className="hiddenoverfolw h-36 scroll-smooth w-full px-5 flex gap-6 items-center overflow-auto">
+                    <div ref={scrollContainerRef} className="hiddenoverfolw h-36 scroll-smooth w-full px-5 flex gap-6 items-center overflow-auto">
                         {
                             data.map((doc, i) => {
                                 return <div className="w-fit h-fit p-2 flex flex-col gap-3 justify-center items-center cursor-pointer text-red-500 hover:text-black" key={i}>
@@ -40,12 +54,12 @@ const ImageSlider = () => {
                         }
 
                     </div>
-                    <div className="absolute top-14 left-4 bg-black opacity-60 text-white hover:bg-white hover:text-black p-1 md:p-2 rounded-full">
+                    <div onClick={Rightslide} className="cursor-pointer absolute top-14 left-4 bg-black opacity-60 text-white hover:bg-white hover:text-black p-1 md:p-2 rounded-full">
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.8} stroke="currentColor" className="size-7">
                             <path strokeLinecap="round" strokeLinejoin="round" d="m18.75 4.5-7.5 7.5 7.5 7.5m-6-15L5.25 12l7.5 7.5" />
                         </svg>
                     </div>
-                    <div className="absolute top-14 right-4  bg-black opacity-60 text-white hover:bg-white hover:text-black p-1 md:p-2 rounded-full">
+                    <div onClick={Leftslide} className="cursor-pointer absolute top-14 right-4  bg-black opacity-60 text-white hover:bg-white hover:text-black p-1 md:p-2 rounded-full">
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.8} stroke="currentColor" className="size-7">
                             <path strokeLinecap="round" strokeLinejoin="round" d="m5.25 4.5 7.5 7.5-7.5 7.5m6-15 7.5 7.5-7.5 7.5" />
                         </svg>
