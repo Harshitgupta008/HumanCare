@@ -12,7 +12,7 @@ const review = async (req, res) => {
         })
 
         await response.save();
-        return res.status(200).send("review submitted "+ response);
+        return res.status(200).send("review submitted ");
     } catch (error) {
         console.log("find error in review controller :: "+error);
     }
