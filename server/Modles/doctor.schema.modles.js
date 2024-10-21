@@ -6,9 +6,14 @@ const doctorSchema = new mongoose.Schema({
         data: Buffer,
         type: String
     },
+    dpid: {
+        data: Buffer,
+        type: String
+    },
     usertype: {
         type: String,
-        require: true
+        require: true,
+        default: 'doctor'
     },
     name: {
         type: String,
